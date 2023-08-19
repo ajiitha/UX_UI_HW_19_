@@ -8,7 +8,7 @@
 
         /* Set background image */
         body {
-            background-image: url('background.jpeg');
+            background-image: url('path/to/background-image.jpg');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -17,14 +17,21 @@
 <body>
     <div class="navigation">
         <div class="inline-block logo">
-            <img src="logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Logo">
         </div>
-        <!-- ... Rest of your navigation code ... -->
+        <nav class="inline-block">
+            <ul>
+                <li class="inline-block">about</li>
+                <li class="inline-block">skills</li>
+                <li class="inline-block">work</li>
+                <li class="inline-block">contact</li>
+            </ul>
+        </nav>
     </div>
 
     <section class="heroImg">
         <div class="content">
-            <img src="me.png" alt="My Picture">
+            <img src="images/me.png" alt="My Picture">
             <p>
                 Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
             </p>
@@ -33,16 +40,24 @@
     </section>
 
     <footer>
-        <!-- ... Rest of your footer code ... -->
+        <ul>
+            <li class="inline-block">about</li>
+            <li class="inline-block">skills</li>
+            <li class="inline-block">work</li>
+            <li class="inline-block">contact</li>
+        </ul>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
+            // Attach a click event handler to the "Download Resume" button
             $('#downloadBtn').on('click', function() {
-                window.open('path/to/resume.png', '_blank');
+                // Replace "resume.pdf" with your actual PDF file's name and path
+                window.open('path/to/resume.pdf', '_blank');
             });
         });
     </script>
 </body>
 </html>
+
