@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add any additional styling here */
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="inline-block logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <nav class="inline-block">
+            <ul>
+                <li class="inline-block">about</li>
+                <li class="inline-block">skills</li>
+                <li class="inline-block">work</li>
+                <li class="inline-block">contact</li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="heroImg">
+        <div class="content">
+            <img src="images/me.png" alt="My Picture">
+            <p>
+                Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
+            </p>
+            <button id="downloadBtn">Download Resume</button>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li class="inline-block">about</li>
+            <li class="inline-block">skills</li>
+            <li class="inline-block">work</li>
+            <li class="inline-block">contact</li>
+        </ul>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // jQuery code for the UI interaction
+        $(document).ready(function() {
+            // Attach a click event handler to the "Download Resume" button
+            $('#downloadBtn').on('click', function() {
+                alert("Resume download will start!");
+                // You can add further functionality for resume download here
+            });
+        });
+    </script>
+</body>
+</html>
