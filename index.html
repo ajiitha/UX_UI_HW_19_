@@ -121,6 +121,7 @@
             border-radius: 5px;
             text-align: center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            animation: spark 1s ease-in-out; /* Add spark animation */
         }
 
         /* CSS to style the close button */
@@ -129,6 +130,12 @@
             top: 10px;
             right: 10px;
             cursor: pointer;
+        }
+
+        /* Keyframes for the spark animation */
+        @keyframes spark {
+            0% { transform: translateY(0); opacity: 0; }
+            100% { transform: translateY(-100px); opacity: 1; }
         }
     </style>
 </head>
