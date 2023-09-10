@@ -103,8 +103,8 @@
         /* CSS to style the button */
         button {
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: lavender; /* Change button color to lavender */
+            color: #333;
             border: none;
             cursor: pointer;
         }
@@ -122,24 +122,39 @@
             text-align: center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
         }
+
+        /* CSS to style the close button */
+        #closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <button id="messageButton">Kanna, click here</button>
     <div id="messageContainer">
-        <p id="message"></p>
+        <span id="closeButton">&times;</span>
+        <p id="message">Hi baby! I can't wait to spend my life with you. I <span>&#10084;</span> you.</p> <!-- Added heart icon -->
     </div>
 
     <script>
         // JavaScript to handle button click event
         document.getElementById("messageButton").addEventListener("click", function () {
             var messageContainer = document.getElementById("messageContainer");
-            var message = document.getElementById("message");
+            var closeButton = document.getElementById("closeButton");
 
-            message.textContent = "Hi baby! I can't wait to spend my life with you. I love you.";
+            // Display the message container
             messageContainer.style.display = "block";
+
+            // Add an event listener to the close button
+            closeButton.addEventListener("click", function () {
+                messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
+            });
         });
     </script>
 </body>
 </html>
+
 
