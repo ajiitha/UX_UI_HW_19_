@@ -93,4 +93,53 @@
             padding: 20px;
             border-radius: 5px;
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        /* CSS to style the button */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS to style the message container */
+        #messageContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <button id="messageButton">Kanna, click here</button>
+    <div id="messageContainer">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // JavaScript to handle button click event
+        document.getElementById("messageButton").addEventListener("click", function () {
+            var messageContainer = document.getElementById("messageContainer");
+            var message = document.getElementById("message");
+
+            message.textContent = "Hi baby! I can't wait to spend my life with you. I love you.";
+            messageContainer.style.display = "block";
+        });
+    </script>
+</body>
+</html>
 
