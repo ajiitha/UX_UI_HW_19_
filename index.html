@@ -132,10 +132,14 @@
             cursor: pointer;
         }
 
-        /* Keyframes for the spark animation */
-        @keyframes spark {
-            0% { transform: translateY(0); opacity: 0; }
-            100% { transform: translateY(-100px); opacity: 1; }
+        /* CSS to style the answer buttons */
+        .answerButton {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -143,7 +147,10 @@
     <button id="messageButton">Kanna, click here</button>
     <div id="messageContainer">
         <span id="closeButton">&times;</span>
-        <p id="message">Hi baby! I can't wait to spend my life with you. I <span>&#10084;</span> you. -Ajiitha</p> <!-- Added heart icon -->
+        <p id="message">Hi baby! I can't wait to spend my life with you. I <span>&#10084;</span> you.</p> <!-- Added heart icon -->
+        <p id="question">Do you love me?</p>
+        <button class="answerButton" id="yesButton">Yes</button>
+        <button class="answerButton" id="noButton">No</button>
     </div>
 
     <script>
@@ -151,6 +158,8 @@
         document.getElementById("messageButton").addEventListener("click", function () {
             var messageContainer = document.getElementById("messageContainer");
             var closeButton = document.getElementById("closeButton");
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
 
             // Display the message container
             messageContainer.style.display = "block";
@@ -159,9 +168,19 @@
             closeButton.addEventListener("click", function () {
                 messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
             });
+
+            // Add event listeners to the answer buttons
+            yesButton.addEventListener("click", function () {
+                alert("That's wonderful! I love you too.");
+            });
+
+            noButton.addEventListener("click", function () {
+                alert("I hope you change your mind. I still love you.");
+            });
         });
     </script>
 </body>
 </html>
+
 
 
