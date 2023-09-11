@@ -1,155 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Add any additional styling here */
-
-        /* Set background image */
-        body {
-            background-image: url('header.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0;
-            padding: 0;
-            font-family: "Roboto", Arial, sans-serif; /* Set the font to Roboto */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center content horizontally */
-            justify-content: center; /* Center content vertically */
-            min-height: 100vh; /* Ensure full viewport height */
-        }
-
-        /* Navigation styles */
-        .navigation {
-            background-color: white; /* White header background */
-            color: black; /* Black text color */
-            display: flex;
-            align-items: center; /* Align items vertically in the middle */
-            padding: 10px 20px;
-            width: 100%;
-            justify-content: space-between; /* Align items horizontally with space in between */
-        }
-
-        .navigation ul {
-            list-style: none;
-            display: flex;
-        }
-
-        .navigation li {
-            margin-left: 20px; /* Adjust spacing between menu items */
-            cursor: pointer;
-        }
-
-        /* Logo styles */
-        .logo img {
-            max-width: 80px; /* Adjust the width as needed */
-            height: auto;
-        }
-
-        /* Hero section styles */
-        .heroImg {
-            background-color: #fff;
-            padding: 50px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .heroImg img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Content in the hero section */
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Download button styles */
-        #downloadBtn {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            margin-top: 20px; /* Add space between paragraph and button */
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: white; /* White footer background */
-            color: black; /* Black text color */
-            text-align: center;
-            padding: 10px 0;
-            width: 100%;
-        }
-
-        footer ul {
-            list-style: none;
-            display: flex;
-            justify-content: flex-end; /* Align items horizontally to the right */
-        }
-
-        footer li {
-            margin-left: 20px; /* Adjust spacing between menu items */
-            cursor: pointer;
-        }
-    </style>
-</head>
-<body>
-    <div class="navigation">
-        <div class="inline-block logo">
-            <img src="Logo.png" alt="Logo" width="80"> <!-- Adjust the width as needed -->
-        </div>
-        <nav class="inline-block">
-            <ul>
-                <li class="inline-block">about</li>
-                <li class="inline-block">skills</li>
-                <li class="inline-block">work</li>
-                <li class="inline-block">contact</li>
-            </ul>
-        </nav>
-    </div>
-
-    <section class="heroImg">
-        <div class="content">
-            <img src="me.png" alt="My Picture">
-            <p>
-                Ajiitha Anand
-                UX/UI Designer 
-                Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
-            </p>
-
-            <button id="downloadBtn">Download Resume</button>
-        </div>
-    </section>
-
-    <footer>
-        <ul>
-            <li class="inline-block">about</li>
-            <li class="inline-block">skills</li>
-            <li class="inline-block">work</li>
-            <li class="inline-block">contact</li>
-        </ul>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Attach a click event handler to the "Download Resume" button
-            $('#downloadBtn').on('click', function() {
-                window.open('resumeee.png');
-            });
-        });
-    </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -197,10 +46,11 @@
         .answerButton {
             margin: 10px;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: lavender; /* Change background color to lavender */
+            color: #000; /* Set text color to black */
             border: none;
             cursor: pointer;
+            border-radius: 10px; /* Add rounded edges */
         }
 
         /* CSS to style the logo */
@@ -240,53 +90,47 @@
     </div>
 
     <script>
-        // Variable to track if the popup has been displayed
-        var popupDisplayed = false;
-
         // JavaScript to handle button click event
         document.getElementById("messageButton").addEventListener("click", function () {
-            if (!popupDisplayed) {
-                var messageContainer = document.getElementById("messageContainer");
-                var closeButton = document.getElementById("closeButton");
-                var yesButton = document.getElementById("yesButton");
-                var noButton = document.getElementById("noButton");
-                var message = document.getElementById("message");
-                var heart = document.querySelector(".heart");
-                var brokenHeart = document.querySelector(".broken-heart");
+            var messageContainer = document.getElementById("messageContainer");
+            var closeButton = document.getElementById("closeButton");
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+            var message = document.getElementById("message");
+            var heart = document.querySelector(".heart");
+            var brokenHeart = document.querySelector(".broken-heart");
 
-                // Display the message container
-                messageContainer.style.display = "block";
-                popupDisplayed = true;
+            // Display the message container
+            messageContainer.style.display = "block";
 
-                // Add an event listener to the close button
-                closeButton.addEventListener("click", function () {
-                    messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
-                });
+            // Add an event listener to the close button
+            closeButton.addEventListener("click", function () {
+                messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
+            });
 
-                // Typing animation for the message
-                var text = "Hi baby! I can't wait to spend my life with you. I love you.";
-                var speed = 50; // Typing speed in milliseconds
-                var i = 0;
+            // Typing animation for the message
+            var text = "Hi baby! I can't wait to spend my life with you. I love you.";
+            var speed = 50; // Typing speed in milliseconds
+            var i = 0;
 
-                function typeWriter() {
-                    if (i < text.length) {
-                        message.innerHTML += text.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, speed);
-                    }
+            function typeWriter() {
+                if (i < text.length) {
+                    message.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
                 }
-
-                typeWriter();
-
-                // Add event listeners to the answer buttons
-                yesButton.addEventListener("click", function () {
-                    alert("That's wonderful! I love you too, my ice cream man");
-                });
-
-                noButton.addEventListener("click", function () {
-                    alert("I hope you change your mind. I still love you, Kanna");
-                });
             }
+
+            typeWriter();
+
+            // Add event listeners to the answer buttons
+            yesButton.addEventListener("click", function () {
+                alert("That's wonderful! I love you too, my ice cream man");
+            });
+
+            noButton.addEventListener("click", function () {
+                alert("I hope you change your mind. I still love you, Kanna");
+            });
         });
     </script>
 </body>
