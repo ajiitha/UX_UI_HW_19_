@@ -122,6 +122,132 @@
             text-align: center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             animation: spark 1s ease-in-out; /* Add spark animation */
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        /* CSS to style the button */
+        button {
+            padding: 10px 20px;
+            background-color: lavender; /* Change button color to lavender */
+            color: #333;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS to style the message container */
+        #messageContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            animation: spark 1s ease-in-out; /* Add spark animation */
+        }
+
+        /* CSS to style the close button */
+        #closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        /* CSS to style the answer buttons */
+        .answerButton {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS to style the logo */
+        #logo {
+            width: 100px; /* Adjust the width and height to fit your logo */
+            height: auto;
+        }
+
+        /* CSS to style the heart icon */
+        #heart {
+            font-size: 24px;
+            animation: beat 1s infinite; /* Add heart beating animation */
+        }
+
+        /* Keyframes for the heart beating animation */
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <button id="messageButton">Kanna, click here</button>
+    <div id="messageContainer">
+        <span id="closeButton">&times;</span>
+        <p id="message"></p>
+        <p id="question">Do you love me?</p>
+        <button class="answerButton" id="yesButton">Yes</button>
+        <button class="answerButton" id="noButton">No</button>
+        <span id="heart">&#10084;&#10148;</span> <!-- Replace with heart and arrow symbol -->
+    </div>
+
+    <script>
+        // JavaScript to handle button click event
+        document.getElementById("messageButton").addEventListener("click", function () {
+            var messageContainer = document.getElementById("messageContainer");
+            var closeButton = document.getElementById("closeButton");
+            var yesButton = document.getElementById("yesButton");
+            var noButton = document.getElementById("noButton");
+            var message = document.getElementById("message");
+            var heart = document.getElementById("heart");
+
+            // Display the message container
+            messageContainer.style.display = "block";
+
+            // Add an event listener to the close button
+            closeButton.addEventListener("click", function () {
+                messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
+            });
+
+            // Typing animation for the message
+            var text = "Hi baby! I can't wait to spend my life with you. I love you.";
+            var speed = 50; // Typing speed in milliseconds
+            var i = 0;
+
+            function typeWriter() {
+                if (i < text.length) {
+                    message.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+
+            // Add event listeners to the answer buttons
+            yesButton.addEventListener("click", function () {
+                alert("That's wonderful! I love you too my ice cream man");
+            });
+
+            noButton.addEventListener("click", function () {
+                alert("I hope you change your mind. I still love you, Kanna");
+            });
+        });
+    </script>
+</body>
+</html>
+
 
 
 
