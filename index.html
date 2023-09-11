@@ -85,17 +85,24 @@
             text-align: center;
             padding: 10px 0;
             width: 100%;
+            display: flex;
+            justify-content: flex-end; /* Align items horizontally to the right */
         }
 
         footer ul {
             list-style: none;
             display: flex;
-            justify-content: space-between; /* Align items horizontally to the right */
         }
 
         footer li {
             margin-left: 20px; /* Adjust spacing between menu items */
             cursor: pointer;
+        }
+
+        /* Title styles */
+        .title {
+            font-weight: bold;
+            font-size: 24px;
         }
     </style>
 </head>
@@ -116,13 +123,10 @@
 
     <section class="heroImg">
         <div class="content">
-            <div class="hero-title">
-                <img src="me.png" alt="My Picture">
-                <p>
-                    Ajiitha Anand
-                    UX/UI Designer
-                </p>
-            </div>
+            <img src="me.png" alt="My Picture">
+            <p class="title">
+                Ajiitha Anand UX/UI Designer
+            </p>
             <p>
                 Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
             </p>
@@ -151,10 +155,6 @@
     </script>
 </body>
 </html>
-
-
-
-
 
             
 <!DOCTYPE html>
