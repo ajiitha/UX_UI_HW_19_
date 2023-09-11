@@ -34,5 +34,53 @@ body {
 /* Style the logo */
 .logo img {
     max-width: 100%;
+    height: auto;
+}
+
+/* Style the hero section */
+.heroImg {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.heroImg img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the content in the hero section */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the download button */
+#downloadBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
    
 
