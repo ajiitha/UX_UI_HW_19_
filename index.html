@@ -29,7 +29,7 @@
             align-items: center; /* Align items vertically in the middle */
             padding: 10px 20px;
             width: 100%;
-            justify-content: flex-end; /* Align items horizontally to the right */
+            justify-content: space-between; /* Align items horizontally with space in between */
         }
 
         .navigation ul {
@@ -40,6 +40,12 @@
         .navigation li {
             margin-left: 20px; /* Adjust spacing between menu items */
             cursor: pointer;
+        }
+
+        /* Logo styles */
+        .logo img {
+            max-width: 80px; /* Adjust the width as needed */
+            height: auto;
         }
 
         /* Hero section styles */
@@ -84,7 +90,7 @@
         footer ul {
             list-style: none;
             display: flex;
-            justify-content: flex-end; /* Align items horizontally to the right */
+            justify-content: space-between; /* Align items horizontally with space in between */
         }
 
         footer li {
@@ -95,6 +101,9 @@
 </head>
 <body>
     <div class="navigation">
+        <div class="inline-block logo">
+            <img src="Logo.png" alt="Logo" width="80"> <!-- Adjust the width as needed -->
+        </div>
         <nav class="inline-block">
             <ul>
                 <li class="inline-block">about</li>
@@ -103,9 +112,6 @@
                 <li class="inline-block">contact</li>
             </ul>
         </nav>
-        <div class="inline-block logo">
-            <img src="Logo.png" alt="Logo" width="80"> <!-- Adjust the width as needed -->
-        </div>
     </div>
 
     <section class="heroImg">
@@ -141,6 +147,7 @@
     </script>
 </body>
 </html>
+
 
 
             
