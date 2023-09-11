@@ -151,7 +151,6 @@
 
 
             
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,11 +165,6 @@
             color: #fff;
             border: none;
             cursor: pointer;
-        }
-
-        /* Apply hover effect to hide text */
-        button:hover {
-            color: transparent;
         }
 
         /* CSS to style the message container */
@@ -218,13 +212,6 @@
             animation: beat 1s infinite; /* Add heart beating animation */
         }
 
-        /* CSS to style the broken heart icon */
-        .broken-heart {
-            font-size: 24px;
-            animation: beat 1s infinite; /* Add heart beating animation */
-            color: red; /* Set color to red for the broken heart */
-        }
-
         /* Keyframes for the heart beating animation */
         @keyframes beat {
             0%, 100% { transform: scale(1); }
@@ -243,51 +230,60 @@
     </div>
 
     <script>
+        // Define a variable to track whether the popup is open or closed
+        var isPopupOpen = false;
+
         // JavaScript to handle button click event
         document.getElementById("messageButton").addEventListener("click", function () {
-            var messageContainer = document.getElementById("messageContainer");
-            var closeButton = document.getElementById("closeButton");
-            var yesButton = document.getElementById("yesButton");
-            var noButton = document.getElementById("noButton");
-            var message = document.getElementById("message");
-            var heart = document.querySelector(".heart");
-            var brokenHeart = document.querySelector(".broken-heart");
+            // Check if the popup is closed before opening it
+            if (!isPopupOpen) {
+                var messageContainer = document.getElementById("messageContainer");
+                var closeButton = document.getElementById("closeButton");
+                var yesButton = document.getElementById("yesButton");
+                var noButton = document.getElementById("noButton");
+                var message = document.getElementById("message");
+                var heart = document.querySelector(".heart");
+                var brokenHeart = document.querySelector(".broken-heart");
 
-            // Display the message container
-            messageContainer.style.display = "block";
+                // Display the message container
+                messageContainer.style.display = "block";
+                isPopupOpen = true; // Set the popup state to open
 
-            // Add an event listener to the close button
-            closeButton.addEventListener("click", function () {
-                messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
-            });
+                // Add an event listener to the close button
+                closeButton.addEventListener("click", function () {
+                    messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
+                    isPopupOpen = false; // Set the popup state to closed
+                });
 
-            // Typing animation for the message
-            var text = "Hi baby! I can't wait to spend my life with you. I love you.";
-            var speed = 50; // Typing speed in milliseconds
-            var i = 0;
+                // Typing animation for the message
+                var text = "Hi baby! I can't wait to spend my life with you. I love you.";
+                var speed = 50; // Typing speed in milliseconds
+                var i = 0;
 
-            function typeWriter() {
-                if (i < text.length) {
-                    message.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, speed);
+                function typeWriter() {
+                    if (i < text.length) {
+                        message.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
                 }
+
+                typeWriter();
+
+                // Add event listeners to the answer buttons
+                yesButton.addEventListener("click", function () {
+                    alert("That's wonderful! I love you too, my ice cream man");
+                });
+
+                noButton.addEventListener("click", function () {
+                    alert("I hope you change your mind. I still love you, Kanna");
+                });
             }
-
-            typeWriter();
-
-            // Add event listeners to the answer buttons
-            yesButton.addEventListener("click", function () {
-                alert("That's wonderful! I love you too, my ice cream man");
-            });
-
-            noButton.addEventListener("click", function () {
-                alert("I hope you change your mind. I still love you, Kanna");
-            });
         });
     </script>
 </body>
 </html>
+
 
 
 
