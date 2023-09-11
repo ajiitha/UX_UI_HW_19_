@@ -233,13 +233,13 @@
     </div>
 
     <script>
-        // Define a variable to track whether the popup is open or closed
-        var isPopupOpen = false;
+        // Define a variable to track whether the typewriter message has been displayed
+        var messageDisplayed = false;
 
         // JavaScript to handle button click event
         document.getElementById("messageButton").addEventListener("click", function () {
-            // Check if the popup is closed before opening it
-            if (!isPopupOpen) {
+            // Check if the typewriter message has already been displayed
+            if (!messageDisplayed) {
                 var messageContainer = document.getElementById("messageContainer");
                 var closeButton = document.getElementById("closeButton");
                 var yesButton = document.getElementById("yesButton");
@@ -251,12 +251,12 @@
 
                 // Display the message container
                 messageContainer.style.display = "block";
-                isPopupOpen = true; // Set the popup state to open
+                messageDisplayed = true; // Set the message display state to true
 
                 // Add an event listener to the close button
                 closeButton.addEventListener("click", function () {
                     messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
-                    isPopupOpen = false; // Set the popup state to closed
+                    messageDisplayed = false; // Reset the message display state to false
                 });
 
                 // Typing animation for the message
