@@ -153,7 +153,6 @@
 </body>
 </html>
 
-            
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,8 +196,8 @@
         .answerButton {
             margin: 10px;
             padding: 10px 20px;
-            background-color: lavender; /* Lavender button color */
-            color: black; /* Black text color */
+            background-color: #007bff;
+            color: #fff;
             border: none;
             cursor: pointer;
         }
@@ -227,7 +226,7 @@
     <div id="messageContainer">
         <span id="closeButton">&times;</span>
         <p id="message"></p>
-        <p id="question"></p>
+        <p id="question">Do you love me?</p>
         <button class="answerButton" id="yesButton">Yes <span class="heart">&#10084;</span></button>
         <button class="answerButton" id="noButton">No <span class="broken-heart">&#128148;</span></button>
     </div>
@@ -235,7 +234,6 @@
     <script>
         // Define a variable to track whether the popup is open or closed
         var isPopupOpen = false;
-        var isTypewriterUsed = false;
 
         // JavaScript to handle button click event
         document.getElementById("messageButton").addEventListener("click", function () {
@@ -250,6 +248,10 @@
                 var heart = document.querySelector(".heart");
                 var brokenHeart = document.querySelector(".broken-heart");
 
+                // Reset the message content
+                message.textContent = "";
+                question.textContent = "";
+
                 // Display the message container
                 messageContainer.style.display = "block";
                 isPopupOpen = true; // Set the popup state to open
@@ -260,27 +262,20 @@
                     isPopupOpen = false; // Set the popup state to closed
                 });
 
-                // Typing animation for the message (runs only once)
-                if (!isTypewriterUsed) {
-                    var text = "Hi baby! I can't wait to spend my life with you. I love you.";
-                    var speed = 50; // Typing speed in milliseconds
-                    var i = 0;
+                // Typing animation for the message
+                var text = "Hi baby! I can't wait to spend my life with you. I love you.";
+                var speed = 50; // Typing speed in milliseconds
+                var i = 0;
 
-                    function typeWriter() {
-                        if (i < text.length) {
-                            message.innerHTML += text.charAt(i);
-                            i++;
-                            setTimeout(typeWriter, speed);
-                        } else {
-                            // Once the message is typed, set the question text and enable the "Kanna click here" button
-                            question.textContent = "Do you love me?";
-                            document.getElementById("messageButton").style.display = "inline-block";
-                            isTypewriterUsed = true; // Mark the typewriter message as used
-                        }
+                function typeWriter() {
+                    if (i < text.length) {
+                        message.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
                     }
-
-                    typeWriter();
                 }
+
+                typeWriter();
 
                 // Add event listeners to the answer buttons
                 yesButton.addEventListener("click", function () {
@@ -291,12 +286,7 @@
                     alert("I hope you change your mind. I still love you, Kanna");
                 });
             }
-        });
-    </script>
-</body>
-</html>
-
-    
+       
     </script>
 </body>
 </html>
