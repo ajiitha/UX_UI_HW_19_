@@ -215,13 +215,6 @@
             animation: beat 1s infinite; /* Add heart beating animation */
         }
 
-        /* CSS to style the broken heart icon */
-        .broken-heart {
-            font-size: 24px;
-            animation: beat 1s infinite; /* Add heart beating animation */
-            color: red; /* Set color to red for the broken heart */
-        }
-
         /* Keyframes for the heart beating animation */
         @keyframes beat {
             0%, 100% { transform: scale(1); }
@@ -230,6 +223,7 @@
     </style>
 </head>
 <body>
+    <button id="messageButton">Kanna, click here</button>
     <div id="messageContainer">
         <span id="closeButton">&times;</span>
         <p id="message"></p>
@@ -295,11 +289,5 @@
             }
         });
     </script>
-
-    <button id="messageButton" style="display: none;">Kanna, click here</button>
 </body>
 </html>
-
-
-
-
