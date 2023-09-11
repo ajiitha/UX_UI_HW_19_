@@ -233,13 +233,14 @@
     </div>
 
     <script>
-        // Define a variable to track whether the typewriter message has been displayed
-        var messageDisplayed = false;
+        // Define a variable to track whether the popup is open or closed
+        var isPopupOpen = false;
+        var isTypewriterUsed = false;
 
         // JavaScript to handle button click event
         document.getElementById("messageButton").addEventListener("click", function () {
-            // Check if the typewriter message has already been displayed
-            if (!messageDisplayed) {
+            // Check if the popup is closed before opening it
+            if (!isPopupOpen) {
                 var messageContainer = document.getElementById("messageContainer");
                 var closeButton = document.getElementById("closeButton");
                 var yesButton = document.getElementById("yesButton");
@@ -251,32 +252,35 @@
 
                 // Display the message container
                 messageContainer.style.display = "block";
-                messageDisplayed = true; // Set the message display state to true
+                isPopupOpen = true; // Set the popup state to open
 
                 // Add an event listener to the close button
                 closeButton.addEventListener("click", function () {
                     messageContainer.style.display = "none"; // Hide the message container when the close button is clicked
-                    messageDisplayed = false; // Reset the message display state to false
+                    isPopupOpen = false; // Set the popup state to closed
                 });
 
-                // Typing animation for the message
-                var text = "Hi baby! I can't wait to spend my life with you. I love you.";
-                var speed = 50; // Typing speed in milliseconds
-                var i = 0;
+                // Typing animation for the message (runs only once)
+                if (!isTypewriterUsed) {
+                    var text = "Hi baby! I can't wait to spend my life with you. I love you.";
+                    var speed = 50; // Typing speed in milliseconds
+                    var i = 0;
 
-                function typeWriter() {
-                    if (i < text.length) {
-                        message.innerHTML += text.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, speed);
-                    } else {
-                        // Once the message is typed, set the question text and enable the "Kanna click here" button
-                        question.textContent = "Do you love me?";
-                        document.getElementById("messageButton").style.display = "inline-block";
+                    function typeWriter() {
+                        if (i < text.length) {
+                            message.innerHTML += text.charAt(i);
+                            i++;
+                            setTimeout(typeWriter, speed);
+                        } else {
+                            // Once the message is typed, set the question text and enable the "Kanna click here" button
+                            question.textContent = "Do you love me?";
+                            document.getElementById("messageButton").style.display = "inline-block";
+                            isTypewriterUsed = true; // Mark the typewriter message as used
+                        }
                     }
-                }
 
-                typeWriter();
+                    typeWriter();
+                }
 
                 // Add event listeners to the answer buttons
                 yesButton.addEventListener("click", function () {
@@ -286,6 +290,12 @@
                 noButton.addEventListener("click", function () {
                     alert("I hope you change your mind. I still love you, Kanna");
                 });
+            }
+        });
+    </script>
+</body>
+</html>
+
             }
         });
     </script>
