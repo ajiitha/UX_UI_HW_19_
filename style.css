@@ -1,3 +1,111 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set background image */
+body {
+    background-image: url('header.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation styles */
+.navigation {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Logo styles */
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Hero section styles */
+.heroImg {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.heroImg img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Content in the hero section */
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Download button styles */
+#downloadBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .navigation ul {
+        margin-top: 20px;
+    }
+
+    .heroImg {
+        padding: 20px;
+    }
+}
+
 
 
  
