@@ -69,29 +69,29 @@
         }
 
         /* Download button styles */
-        #downloadBtn, #messageButton {
+        .button {
             padding: 10px 20px;
-            background-color: lavender; /* Lavender button color */
-            color: black; /* Black text color */
+            background-color: lavender; /* Lavender background color */
+            color: #000; /* Black text color */
             border: none;
             cursor: pointer;
             margin-top: 20px; /* Add space between paragraph and button */
+            border-radius: 25px; /* Rounded edges */
         }
 
         /* Footer styles */
         footer {
             background-color: white; /* White footer background */
             color: black; /* Black text color */
-            text-align: center;
-            padding: 10px 0;
+            text-align: right; /* Align text to the right */
+            padding: 10px 20px; /* Adjust padding */
             width: 100%;
-            display: flex;
-            justify-content: flex-end; /* Align items horizontally to the right */
         }
 
         footer ul {
             list-style: none;
             display: flex;
+            justify-content: flex-end; /* Align items horizontally to the right */
         }
 
         footer li {
@@ -99,9 +99,9 @@
             cursor: pointer;
         }
 
-        /* Title for the picture */
+        /* Title styles */
         .title {
-            font-weight: bold; /* Make the title text bold */
+            font-weight: bold; /* Make the title bold */
         }
     </style>
 </head>
@@ -123,12 +123,13 @@
     <section class="heroImg">
         <div class="content">
             <img src="me.png" alt="My Picture">
-            <p class="title">Ajiitha Anand UX/UI Designer</p>
+            <p class="title">Ajiitha Anand</p>
             <p>
+                UX/UI Designer 
                 Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
             </p>
 
-            <button id="downloadBtn">Download Resume</button>
+            <button class="button" id="downloadBtn">Download Resume</button>
         </div>
     </section>
 
@@ -152,6 +153,7 @@
     </script>
 </body>
 </html>
+
 
 <!DOCTYPE html>
 <html lang="en">
