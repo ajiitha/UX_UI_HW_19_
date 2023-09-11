@@ -157,8 +157,6 @@
 
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -173,7 +171,6 @@
             color: black; /* Black text color */
             border: none;
             cursor: pointer;
-            border-radius: 10px; /* Add rounded edges */
         }
 
         /* Apply hover effect to hide text */
@@ -246,6 +243,7 @@
     <div id="messageContainer">
         <span id="closeButton">&times;</span>
         <p id="message"></p>
+        <p id="question">Do you love me?</p>
         <button class="answerButton" id="yesButton">Yes <span class="heart">&#10084;</span></button>
         <button class="answerButton" id="noButton">No <span class="broken-heart">&#128148;</span></button>
     </div>
@@ -282,10 +280,6 @@
                 }
             }
 
-            // Clear the previous message content before typing
-            message.innerHTML = "";
-
-            // Start typing
             typeWriter();
 
             // Add event listeners to the answer buttons
@@ -300,3 +294,4 @@
     </script>
 </body>
 </html>
+
