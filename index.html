@@ -13,7 +13,7 @@
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: "Roboto", Arial, sans-serif; /* Set the font to Roboto */
             display: flex;
             flex-direction: column;
             align-items: center; /* Center content horizontally */
@@ -21,14 +21,32 @@
             min-height: 100vh; /* Ensure full viewport height */
         }
 
+        /* Navigation styles */
+        .navigation {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            align-items: center; /* Align items vertically in the middle */
+            padding: 10px 20px;
+            width: 100%;
+            justify-content: flex-end; /* Align items horizontally to the right */
+        }
+
+        .navigation ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navigation li {
+            margin-left: 20px; /* Adjust spacing between menu items */
+            cursor: pointer;
+        }
+
         /* Rest of your CSS styles */
     </style>
 </head>
 <body>
     <div class="navigation">
-        <div class="inline-block logo">
-            <img src="Logo.png" alt="Logo" width="80"> <!-- Adjust the width as needed -->
-        </div>
         <nav class="inline-block">
             <ul>
                 <li class="inline-block">about</li>
@@ -37,6 +55,9 @@
                 <li class="inline-block">contact</li>
             </ul>
         </nav>
+        <div class="inline-block logo">
+            <img src="Logo.png" alt="Logo" width="80"> <!-- Adjust the width as needed -->
+        </div>
     </div>
 
     <section class="heroImg">
@@ -72,6 +93,7 @@
     </script>
 </body>
 </html>
+
 
 <!DOCTYPE html>
 <html lang="en">
