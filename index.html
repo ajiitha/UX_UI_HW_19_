@@ -156,7 +156,6 @@
 </html>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -243,9 +242,9 @@
     <div id="messageContainer">
         <span id="closeButton" onclick="hideMessage()">&times;</span>
         <p id="message"></p>
-        <p id="question"></p>
-        <button class="answerButton" id="yesButton" onclick="showAnswer('Yes')">Yes <span class="heart">&#10084;</span></button>
-        <button class="answerButton" id="noButton" onclick="showAnswer('No')">No <span class="broken-heart">&#128148;</span></button>
+        <p id="question">Do you love me?</p>
+        <button class="answerButton" id="yesButton" onclick="alert('That\'s wonderful! I love you too, my ice cream man')">Yes <span class="heart">&#10084;</span></button>
+        <button class="answerButton" id="noButton" onclick="alert('I hope you change your mind. I still love you, Kanna')">No <span class="broken-heart">&#128148;</span></button>
     </div>
 
     <script>
@@ -272,10 +271,6 @@
                         message.innerHTML += text.charAt(i);
                         i++;
                         setTimeout(typeWriter, speed);
-                    } else {
-                        // Display the question
-                        var question = document.getElementById("question");
-                        question.innerHTML = "Do you love me?";
                     }
                 }
 
@@ -290,15 +285,8 @@
             messageContainer.style.display = "none";
             messageButton.disabled = false;
             popupDisplayed = false;
-
-            // Clear the question
-            var question = document.getElementById("question");
-            question.innerHTML = "";
-        }
-
-        function showAnswer(answer) {
-            alert("Your answer: " + answer);
         }
     </script>
 </body>
 </html>
+
