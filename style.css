@@ -1,3 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add any additional styling here */
+
+        /* Set background image */
+        body {
+            background-image: url('header.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+        }
+
+        /* Rest of your CSS styles */
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="inline-block logo">
+            <img src="Logo.png" alt="Logo">
+        </div>
+        <nav class="inline-block">
+            <ul>
+                <li class="inline-block">about</li>
+                <li class="inline-block">skills</li>
+                <li class="inline-block">work</li>
+                <li class="inline-block">contact</li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="heroImg">
+        <div class="content">
+            <img src="me.png" alt="My Picture">
+            <p>
+                Ajiitha Anand
+                UX/UI Designer 
+                Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
+            </p>
+            <button id="downloadBtn">Download Resume</button>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li class="inline-block">about</li>
+            <li class="inline-block">skills</li>
+            <li class="inline-block">work</li>
+            <li class="inline-block">contact</li>
+        </ul>
+    </footer>
+
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Attach a click event handler to the "Download Resume" button
+            $('#downloadBtn').on('click', function() {
+                window.open('resumeee.png');
+            });
+        });
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        /* CSS to style the button */
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS to style the message container */
+        #messageContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Button</title>
+    <style>
+        /* CSS to style the button */
+        button {
+            padding: 10px 20px;
+            background-color: lavender; /* Change button color to lavender */
+            color: #333;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* CSS to style the message container */
+        #messageContainer {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            animation: spark 1s ease-in-out; /* Add spark animation */
+
+
 /* Targets elements with the class of inline-block */
 .inline-block {
     display: inline-block;
