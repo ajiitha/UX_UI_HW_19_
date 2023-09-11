@@ -197,8 +197,8 @@
         .answerButton {
             margin: 10px;
             padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            background-color: lavender; /* Lavender button color */
+            color: black; /* Black text color */
             border: none;
             cursor: pointer;
         }
@@ -215,6 +215,13 @@
             animation: beat 1s infinite; /* Add heart beating animation */
         }
 
+        /* CSS to style the broken heart icon */
+        .broken-heart {
+            font-size: 24px;
+            animation: beat 1s infinite; /* Add heart beating animation */
+            color: red; /* Set color to red for the broken heart */
+        }
+
         /* Keyframes for the heart beating animation */
         @keyframes beat {
             0%, 100% { transform: scale(1); }
@@ -223,11 +230,10 @@
     </style>
 </head>
 <body>
-    <button id="messageButton">Kanna, click here</button>
     <div id="messageContainer">
         <span id="closeButton">&times;</span>
         <p id="message"></p>
-        <p id="question">Do you love me?</p>
+        <p id="question"></p>
         <button class="answerButton" id="yesButton">Yes <span class="heart">&#10084;</span></button>
         <button class="answerButton" id="noButton">No <span class="broken-heart">&#128148;</span></button>
     </div>
@@ -245,6 +251,7 @@
                 var yesButton = document.getElementById("yesButton");
                 var noButton = document.getElementById("noButton");
                 var message = document.getElementById("message");
+                var question = document.getElementById("question");
                 var heart = document.querySelector(".heart");
                 var brokenHeart = document.querySelector(".broken-heart");
 
@@ -268,6 +275,10 @@
                         message.innerHTML += text.charAt(i);
                         i++;
                         setTimeout(typeWriter, speed);
+                    } else {
+                        // Once the message is typed, set the question text and enable the "Kanna click here" button
+                        question.textContent = "Do you love me?";
+                        document.getElementById("messageButton").style.display = "inline-block";
                     }
                 }
 
@@ -284,8 +295,11 @@
             }
         });
     </script>
+
+    <button id="messageButton" style="display: none;">Kanna, click here</button>
 </body>
 </html>
+
 
 
 
