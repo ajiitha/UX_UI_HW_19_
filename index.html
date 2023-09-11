@@ -11,8 +11,14 @@
             background-image: url('header.png');
             background-size: cover;
             background-repeat: no-repeat;
-            margin: 0; /* Reset default margin */
-            padding: 0; /* Reset default padding */
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            min-height: 100vh; /* Ensure full viewport height */
         }
 
         /* Rest of your CSS styles */
@@ -32,82 +38,6 @@
             </ul>
         </nav>
     </div>
-</body>
-</html>
-/* Reset default margin and padding for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set background image */
-body {
-    background-image: url('header.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    min-height: 100vh; /* Ensure full viewport height */
-}
-
-/* Navigation styles */
-.navigation {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
-}
-
-.navigation ul {
-    list-style: none;
-    display: flex;
-}
-
-.navigation li {
-    margin-right: 20px;
-    cursor: pointer;
-}
-
-/* Logo styles */
-.logo img {
-    max-width: 100px;
-    height: auto;
-}
-
-/* Hero section styles */
-.heroImg {
-    background-color: #fff;
-    padding: 50px;
-    text-align: center;
-    width: 100%;
-}
-
-.heroImg img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Content in the hero section */
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Download button styles */
-#downloadBtn {
-    padding: 10px 20px;
-    background
-
 
     <section class="heroImg">
         <div class="content">
@@ -131,7 +61,6 @@ body {
         </ul>
     </footer>
 
- 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -143,6 +72,7 @@ body {
     </script>
 </body>
 </html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
