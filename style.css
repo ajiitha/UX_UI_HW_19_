@@ -1,187 +1,404 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Add any additional styling here */
+*{transition:all 0.1s ease-in-out;}
 
-        /* Set background image */
-        body {
-            background-image: url('header.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            margin: 0; /* Reset default margin */
-            padding: 0; /* Reset default padding */
-        }
+/* NAVIGATION */
 
-        /* Rest of your CSS styles */
-    </style>
-</head>
-<body>
-    <div class="navigation">
-        <div class="inline-block logo">
-            <img src="Logo.png" alt="Logo">
-        </div>
-        <nav class="inline-block">
-            <ul>
-                <li class="inline-block">about</li>
-                <li class="inline-block">skills</li>
-                <li class="inline-block">work</li>
-                <li class="inline-block">contact</li>
-            </ul>
-        </nav>
-    </div>
-
-    <section class="heroImg">
-        <div class="content">
-            <img src="me.png" alt="My Picture">
-            <p>
-                Ajiitha Anand
-                UX/UI Designer 
-                Hi there, I'm Ajiitha - a passionate writer who finds joy in sharing stories while designing immersive experiences that put users at the heart of every journey
-            </p>
-            <button id="downloadBtn">Download Resume</button>
-        </div>
-    </section>
-
-    <footer>
-        <ul>
-            <li class="inline-block">about</li>
-            <li class="inline-block">skills</li>
-            <li class="inline-block">work</li>
-            <li class="inline-block">contact</li>
-        </ul>
-    </footer>
-
- 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Attach a click event handler to the "Download Resume" button
-            $('#downloadBtn').on('click', function() {
-                window.open('resumeee.png');
-            });
-        });
-    </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Button</title>
-    <style>
-        /* CSS to style the button */
-        button {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* CSS to style the message container */
-        #messageContainer {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 5px;
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Button</title>
-    <style>
-        /* CSS to style the button */
-        button {
-            padding: 10px 20px;
-            background-color: lavender; /* Change button color to lavender */
-            color: #333;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* CSS to style the message container */
-        #messageContainer {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            animation: spark 1s ease-in-out; /* Add spark animation */
-
-
-/* Targets elements with the class of inline-block */
-.inline-block {
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Targets the div with the class of logo */
-.logo {
-    width: 23%;
-    padding: 1%;
-}
-
-/* Targets the nav element */
-nav {
-    width: 73%;
-    padding: 1%;
-}
-
-/* Centers the unordered list */
-ul {
-    width: 50%;
-    margin-left: auto;
-}
-
-/* Centers the text inside list items */
-li {
-    padding: 0 10px;
-}
-
-/* Targets the section with the class of heroImg */
-.heroImg {
-    height: 600px;
-    padding: 25px;
-}
-
-/* Targets the div with the class of content */
-.content {
-    width: 500px;
-    margin: 0 auto;
-    display: grid;
-    place-items: center;
-}
-
-/* Center the image inside the content div */
-.content img {
-    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
-}
-
-/* Targets the footer element */
-footer {
-    background-color: #373738;
-    padding: 10px;
-}
-
-/* Targets the ul element inside the footer */
-footer ul {
-    display: inline-block;
-    vertical-align: top;
+body {
+    margin: 0;
     padding: 0;
-}
+  }
+  .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    background-color: white;
+    color: #41397C;
+    border-bottom-right-radius: 36px;
+    border-bottom-left-radius: 36px;
+    box-shadow: 0 0px 15px rgba(0,0,0.24,0.24);
+    z-index: 9999;
+    position: fixed;}
+    nav{float:right;}
+    .logo img{ align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:10px;
+    padding-bottom:10px;}
+    .logo img{
+    height: 6%;
+    width: 6%;
+  margin-top: 0%;}
+    
+    
+    ul li{
+    display: inline-block; padding:10px;
+    font-size:20px; font-family:sans-serif; font-weight: 300;}
+    ul li:hover{
+    color:#fff;
+    background-color: #8AD0FF;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: #41397C;
+    border-radius: 24px 24px 24px 24px;
+    box-shadow: 0 4px 15px 0px rgba(0,0,0.16,0.16);}
+    
+    
+    .logo img:hover{ color:#fff;
+    background-color: #8AD0FF;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color: #41397C;
+    border-radius: 24px 24px 24px 24px;
+    box-shadow: 0 4px 15px 0px rgba(0,0,0.16,0.16);}
+
+ /* HERO SECTION */
+ 
+ 
+.hero-image{
+    background-image: url(../images/backgrounf.png);
+    height: 90%;
+    width: 100%;
+    margin: top -50px;
+  background-position: top, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position:absolute;
+  align-items: flex-start;}
+
+
+.hero {
+  background-image: url('../images/backgrounf.png');
+  background-size: cover;
+  height: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+.hero-content {
+  text-align: center;
+  color: #41397C;}
+
+.hero-subheading {
+  font-size: 18px;
+  font-weight:300;
+  margin-bottom: -24px;
+  font-family:sans-serif;
+  color: black;}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 24px;}
+
+.hero-description {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+  font-weight:300;
+  color: black;}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;}
+
+.hero-button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 0 4px 15px 0px rgba(0,0,0.16,0.16);}
+
+.secondary-button {
+  background-color: transparent;
+  border: 1.5px solid #41397C;
+  border-radius: 24px;
+  color: #41397C;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight:300;}
+
+.primary-button {
+  background-color: #41397C;
+  border: 2px solid #41397C;
+  border-radius: 24px;
+  color: #fff;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight:300;
+  box-shadow: 0 4px 15px 0px rgba(0,0,0.16,0.16);;}
+
+.secondary-button:hover{
+  
+    background-color: #fff;
+    color: #41397C;
+    border-radius: 24px 24px 24px 24px;
+    box-shadow:0 4px 15px 0px rgba(0,0,0.16,0.16);}
+
+.primary-button:hover{
+  
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 24px 24px 24px 24px;
+  box-shadow:0 4px 15px 0px rgba(0,0,0.16,0.16);}
+
+.transparent-image {
+  width: 600px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */}
+
+
+/* LINE */
+
+
+.hero-line {
+  height: 1px;
+  background-color: black;
+  margin: 20px 0;}
+
+.horizontal-line {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 60px 0;}
+
+
+  /* mywork */
+
+
+  
+  .section-heading {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    color: #41397C;
+    font-family: sans-serif;
+    text-align: left;
+    padding-left: 80px;
+  }
+
+  .card-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  
+  .card {
+    background: #fff;
+    width: 400px;
+    height: 500px;
+    padding-bottom: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide any content that overflows the card */
+  }
+  
+  .card-header {
+    height: 35%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .header-img {
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    border-radius: inherit;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .card-1 .header-img {
+    background-image: url(/images/trippal.png);
+    
+  }
+  
+  .card-2 .header-img {
+    background-image: url(/images/education.png);
+    
+  }
+
+  .card-3 .header-img {
+    background-image: url(/images/dogrescue.png);
+    
+  }
+
+  .card:hover .header-img {
+    transform: scale(1.25) rotate(2deg);
+  }
+  
+  .card-title {
+    padding: 15px;
+  }
+  
+  .card-title h1 {
+    font-family:  sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 16px;
+  }
+  
+  .card-title p {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    margin: 0;
+    margin-bottom: 20px;
+    padding-left: 35px;
+    padding-top: 16px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 16px;
+    align-items: center;
+  }
+  
+  .btn {
+    padding: 16px 20px;
+    width: 65%;
+    border-width: 1.5px; /* Set the border size */
+    border-style: solid; /* Set the border style */
+    border-color:#41397C;
+    border-radius: 100px;
+    text-align: center;
+    font-family: sans-serif;
+    transition: all ease-in-out 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #41397C;
+    
+  }
+  
+  .btn:hover {
+    background-color: #41397C;
+    color: #fff;
+  }
+
+
+/* LINE */
+
+
+.horizontal-line2 {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin-top: 60px;
+        margin-bottom: 120px;}
+
+
+/* FOOTER */
+
+
+.footer {
+  background-color: #fff;
+  margin-top: -40px;}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;}
+
+.footer-heading {
+  font-size: 24px;
+  font-weight:500px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  color: #41397C;}
+
+.footer-subheading {
+  font-size: 16px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+  font-weight: 300;}
+
+.footer-icons {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #41397C;}
+
+.footer-icons:hover{
+  color: #000;}
+
+.footer-icons i {
+  margin: 0 10px;}
+
+.footer-copyright {
+  
+  color: #000;
+  font-size: 16px;
+  margin-top: 60px;
+  font-family: sans-serif;
+  font-weight: 300;}
+
+/* MEDIA QUERY*/
+
+  @media screen and (max-width: 768px) {
+    
+    /* Navigation */
+    .navbar {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+    .logo img {
+      height: 40px;
+      width: 40px;
+      margin-top: 0;
+    }
+    ul li {
+      padding: 5px;
+      font-size: 16px;
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 600px;
+    }
+    .hero-title {
+      font-size: 40px;
+    }
+    .hero-subheading {
+      font-size: 14px;
+    }
+    .hero-description {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .hero-buttons {
+      flex-direction: column;
+    }
+    .hero-button {
+      margin-bottom: 10px;
+    }
+    
+    /* My work */
+    .card-section {
+      justify-content: center;
+    }
+    .card {
+      width: 90%;
 
